@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  my-multimodel-agent:
+    build: .
+    container_name: my_multimodel_agent
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    command: python main.py
+
+  # optional local vector DB
+  # vector-db:
+  #   image: ghcr.io/chroma-core/chroma:0.3.21
+  #   container_name: chroma_db
+  #   volumes:
+  #     - ./chroma_data:/chroma
+  #   ports:
+  #     - "8001:8000"

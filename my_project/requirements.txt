@@ -1,0 +1,4 @@
+metagpt
+openai
+pytest
+pytest-asyncio
